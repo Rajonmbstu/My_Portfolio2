@@ -1,0 +1,288 @@
+/* Color Palette */
+:root {
+    --primary-color: #3f51b5; /* Indigo Blue - Used for primary accents */
+    --secondary-color: #f44336; /* Red - Used for contrasting backgrounds */
+    --accent-color: #ffc107; /* Amber/Yellow - Used for highlights and soft skills */
+    --dark-text: #212529;
+    --light-text: #ffffff;
+    --background-light: #f8f9fa; /* Light Gray */
+    --background-dark: #212121; /* Dark Gray */
+}
+
+/* Base Body Styles and Typography */
+body {
+    font-family: 'Libertinus Sans', sans-serif;
+    color: var(--dark-text);
+    line-height: 1.7;
+    background-color: var(--background-light);
+}
+
+.libertinus-sans-regular {
+    font-weight: 400;
+}
+
+/* --- Navigation & Header Styling --- */
+
+/* Custom primary color for the navbar */
+.bg-primary-custom {
+    background-color: var(--primary-color) !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: var(--light-text) !important;
+    font-size: 2.5rem !important;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--light-text) !important;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background-color: var(--accent-color);
+    left: 50%;
+    bottom: 0;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* Carousel/Hero Section */
+.carousel-custom-height {
+    height: 100vh; /* Full viewport height */
+    margin-top: 66px; /* Offset for the fixed navbar height */
+}
+
+.carousel-img-cover {
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(60%); /* Darken the image slightly for text readability */
+}
+
+.carousel-caption-bg {
+    /* Optional: Add a subtle gradient background to improve text readability */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
+    padding: 20px;
+    border-radius: 5px;
+    bottom: 20%;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Section Titles & Dividers --- */
+.section-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-divider {
+    border-top: 4px solid var(--secondary-color);
+    opacity: 1;
+    border-radius: 5px;
+}
+
+.section-divider-light {
+    border-top: 4px solid var(--accent-color);
+    opacity: 1;
+    border-radius: 5px;
+}
+
+
+/* --- About Section Styling --- */
+
+.profile-img-custom {
+    transition: transform 0.5s ease-in-out;
+}
+
+.profile-img-custom:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2) !important;
+}
+
+.about-text-color {
+    color: var(--dark-text);
+}
+
+/* Custom Accordion Styling */
+.accordion-custom .accordion-header button {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    font-weight: 700;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-custom .accordion-header button:not(.collapsed) {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+}
+
+.accordion-custom .accordion-body {
+    background-color: var(--background-light);
+    border-left: 5px solid var(--accent-color);
+}
+
+.btn-custom {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+/* --- Education Section Styling --- */
+.bg-secondary-custom {
+    background-color: var(--primary-color) !important;
+    background-image: linear-gradient(135deg, var(--primary-color) 0%, #303f9f 100%);
+    color: var(--light-text);
+}
+
+.education-card {
+    border: none;
+    border-left: 5px solid var(--accent-color);
+    transition: transform 0.3s ease;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.text-primary-custom {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+
+/* --- Skills Section Styling --- */
+
+.progress-custom {
+    background-color: #e0e0e0; /* Lighter base for progress bar */
+    height: 1.5rem;
+}
+
+.progress-bar-custom {
+    background-color: var(--primary-color) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
+
+.progress-bar-soft {
+    background-color: var(--accent-color) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    font-weight: bold;
+}
+
+.text-secondary-custom {
+    color: var(--secondary-color) !important;
+    font-weight: 700;
+}
+
+.list-item-custom {
+    border-left: 3px solid var(--primary-color);
+    margin-bottom: 5px;
+    padding-left: 15px;
+    background-color: var(--background-light);
+    transition: background-color 0.3s ease;
+}
+
+.list-group-item:hover {
+    background-color: #e8eaf6; /* Light hover color */
+}
+
+/* --- Projects Section Styling --- */
+.project-card-custom {
+    border: 1px solid #ddd;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card-custom:hover {
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.project-img {
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.btn-project {
+    transition: background-color 0.3s ease;
+}
+
+.btn-project.btn-dark:hover {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+}
+
+/* Project Status Footers */
+.project-footer-custom {
+    background-color: #f1f1f1;
+}
+
+.project-footer-custom-new {
+    background-color: #e8f5e9; /* Light Green for 'New Project' */
+    border-top: 3px solid #66bb6a;
+}
+
+.project-footer-custom-progress {
+    background-color: #fffde7; /* Light Yellow for 'In Progress' */
+    border-top: 3px solid #ffeb3b;
+}
+
+
+/* --- Contact Section Styling --- */
+.form-custom {
+    background-color: var(--light-text);
+    border: 1px solid var(--primary-color) !important;
+}
+
+.btn-custom-submit {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-custom-submit:hover {
+    background-color: #303f9f;
+    border-color: #303f9f;
+}
+
+/* --- Footer Styling --- */
+.footer-custom {
+    background-color: var(--background-dark) !important;
+}
+
+.social-icon-custom {
+    transition: color 0.3s ease;
+}
+
+.social-icon-custom:hover i {
+    color: var(--accent-color) !important;
+    transform: scale(1.1);
+    display: inline-block;
+}
